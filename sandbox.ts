@@ -1,12 +1,22 @@
-const character = 'luigi';
-console.log(character);
+//types number, string, boolean
 
-const inputs = document.querySelectorAll('input');
-console.log(inputs);
+let character ='mario';
+let age =30;
+let isBlackBelt = false;
 
-inputs.forEach(input => {
-    console.log(input);
-});
+// character = 20;
+// the line above won't work because character was initialized 
+// to a string value so it's of type string.
 
-//to compile use -> tsc sandbox.ts -w
-//this will compile and create a sandbox.js file that the browser can read
+character = 'luigi';
+// the line above works since luigi is a string type.
+// tis applies to all types we can change the value not the type.
+
+age =40;
+isBlackBelt = true;
+
+const circ = (diameter: number) => {
+    return diameter * Math.PI;
+}
+
+console.log(circ(7.5));
