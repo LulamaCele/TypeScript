@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //explicit
 var character;
 var age;
@@ -27,3 +28,21 @@ var ninjaTwo; // we decalred an object with explicit types and mixed types
 ninjaTwo = { name: 'hero', age: 20, member: true };
 // ninjaTwo = {name: 'hero', age: 20, member: true, skills: []} this line will not work
 // we didn't declare an array when we were declaring ninjaTwo
+=======
+//types number, string, boolean
+var character = 'mario';
+var age = 30;
+var isBlackBelt = false;
+// character = 20;
+// the line above won't work because character was initialized 
+// to a string value so it's of type string.
+character = 'luigi';
+// the line above works since luigi is a string type.
+// tis applies to all types we can change the value not the type.
+age = 40;
+isBlackBelt = true;
+var circ = function (diameter) {
+    return diameter * Math.PI;
+};
+console.log(circ(7.5));
+>>>>>>> 85282b22996cf3114b13e9c1377a1fe0f8d89c29
