@@ -1,29 +1,23 @@
-//explicit
-var character;
-var age;
-var isLoggedIn;
-//age = luigi; this willn not work, age is declared to number type.
-age = 30;
-//  isLoggedIn = 25; this will not work, isLoggedIn is of type boolean not number
-isLoggedIn = false;
-//arrays
-var ninja = []; //initialize an array to an empty array to you can push to it oterwise it will not allow you to push to it.
-ninja.push('panda');
-//union types
-//union type lets you have variables, arrays, or objects with mixed types
-var mixed = []; //declaring a mixed array
-mixed.push('hello');
-mixed.push(20);
+//Dynamic(any) type.
+//  this is used to make the variable take any type be it string, number, boolean and so on.
+var age = 25;
+console.log(age);
+// 2 lines above work and will display age which is 25
+age = 'hello';
+console.log(age);
+// line above also works becaue we declared age to any
+age = { name: 'luigi' };
+console.log(age);
+// line displays an object and works fine because age is any type
+var mixed = []; //declaring an empty array of type any
+mixed.push(23);
+mixed.push('luigi');
 mixed.push(false);
 console.log(mixed);
-var uid; //declaring normal variable to union type
-uid = 'ninja';
-uid = 12;
-// objects
-var ninjaOne;
-ninjaOne = { name: 'ninja', age: 32 };
-// two lines above are for a normal object
-var ninjaTwo; // we decalred an object with explicit types and mixed types
-ninjaTwo = { name: 'hero', age: 20, member: true };
-// ninjaTwo = {name: 'hero', age: 20, member: true, skills: []} this line will not work
-// we didn't declare an array when we were declaring ninjaTwo
+// 4 lines above work Fingerprint, they add value of differnt typrs to an array and there's no errors.
+var ninja; //declared object with properties of type any
+ninja = { name: 'hero', age: 23 };
+console.log(ninja); //will display object ninja
+ninja = { name: 23, age: 'hero' }; //this works fine because properties are of type any
+// but this takes away the protection offered by type script and can lead to errors but is useful if you do not know what the future value of a variable will be
+console.log(ninja); //will display object ninja
